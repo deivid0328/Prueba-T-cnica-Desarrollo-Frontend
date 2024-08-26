@@ -1,27 +1,63 @@
-# PruebaTecnica
+# Prueba Técnica Desarrollo Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+## Descripción
 
-## Development server
+Este repositorio contiene una prueba técnica para un desarrollo frontend. La aplicación está construida utilizando Angular y utiliza componentes de angular material, consume un endpoint para motrar unas imagenes con su repectivo titulo en  mat-card y cuando se da click sobre alguna card esta se muestra en una modal.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologías Utilizadas
 
-## Code scaffolding
+- **Angular**: Framework para construir aplicaciones web dinámicas.
+- **SCSS**: Para la estilización avanzada de componentes.
+- **Angular Material**: Para componentes de UI preconstruidos.
+- **GitHub Pages**: Para el despliegue de la aplicación.
+## Instalación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para instalar y ejecutar este proyecto localmente, sigue estos pasos:
 
-## Build
+1. **Clonar el repositorio**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    ```bash
+    git clone https://github.com/deivid0328/Prueba-Tecnica-Desarrollo-Frontend.git
+    cd Prueba-Tecnica-Desarrollo-Frontend
+    ```
 
-## Running unit tests
+2. **Instalar dependencias**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    Asegúrate de tener [Node.js](https://nodejs.org/) y [npm](https://www.npmjs.com/) instalados. Luego, ejecuta:
 
-## Running end-to-end tests
+    ```bash
+    npm install
+    ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. **Ejecutar la aplicación**
 
-## Further help
+    ```bash
+    ng serve
+    ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    La aplicación estará disponible en `http://localhost:4200/`.
+
+## Uso
+Filtrar las diferentes imagenes por su título
+![image](https://github.com/user-attachments/assets/ffc70245-c572-4626-81fa-315bcfd37cac)
+
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, sigue estos pasos para contribuir:
+
+1. **Hacer un fork del repositorio**
+2. **Crear una nueva rama** (`git checkout -b feature/nueva-caracteristica`)
+3. **Hacer commit de tus cambios** (`git commit -am 'Añadir nueva característica'`)
+4. **Push a la rama** (`git push origin feature/nueva-caracteristica`)
+5. **Abrir un Pull Request**
+
+## Licencia
+
+Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
+
+## Contacto
+
+Para más información, puedes contactar a deividj.54@gmail.com.
+
+---
