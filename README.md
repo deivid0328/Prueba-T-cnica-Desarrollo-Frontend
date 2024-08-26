@@ -2,13 +2,14 @@
 
 ## Descripción
 
-Este repositorio contiene una prueba técnica para un desarrollo frontend. La aplicación está construida utilizando Angular y proporciona una solución para [breve descripción de la funcionalidad principal, por ejemplo, "gestionar tareas y reportes"].
+Este repositorio contiene una prueba técnica para un desarrollo frontend. La aplicación está construida utilizando Angular y utiliza componentes de angular material, consume un endpoint para motrar unas imagenes con su repectivo titulo en  mat-card y cuando se da click sobre alguna card esta se muestra en una modal.
 
 ## Tecnologías Utilizadas
 
 - **Angular**: Framework para construir aplicaciones web dinámicas.
-- **[Otras tecnologías o bibliotecas relevantes, como Angular Material, RxJS, etc.]**
-
+- **SCSS**: Para la estilización avanzada de componentes.
+- **Angular Material**: Para componentes de UI preconstruidos.
+- **GitHub Pages**: Para el despliegue de la aplicación.
 ## Instalación
 
 Para instalar y ejecutar este proyecto localmente, sigue estos pasos:
@@ -37,8 +38,9 @@ Para instalar y ejecutar este proyecto localmente, sigue estos pasos:
     La aplicación estará disponible en `http://localhost:4200/`.
 
 ## Uso
+Filtrar las diferentes imagenes por su título
+![image](https://github.com/user-attachments/assets/ffc70245-c572-4626-81fa-315bcfd37cac)
 
-[Instrucciones sobre cómo usar la aplicación. Aquí puedes incluir ejemplos, capturas de pantalla o cualquier información relevante sobre la funcionalidad de la aplicación.]
 
 ## Contribuciones
 
@@ -56,7 +58,7 @@ Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
 
 ## Contacto
 
-Para más información, puedes contactar a [tu nombre o correo electrónico].
+Para más información, puedes contactar a deividj.54@gmail.com.
 
 ---
 
