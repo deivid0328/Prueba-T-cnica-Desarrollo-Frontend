@@ -77,7 +77,6 @@ itemFavorite(id:number){
   this.selectImage = this.cardsImages.find(item => item.id == id )
   console.log("seleccion",this.selectImage)
   this.imageFavorite.push(this.selectImage)
-  console.log("agregar",event)
   console.log("array de data",this.imageFavorite)
 } 
 
