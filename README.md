@@ -61,5 +61,3 @@ Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
 Para más información, puedes contactar a deividj.54@gmail.com.
 
 ---
-
-**Nota:** Asegúrate de personalizar el `README.md` con información específica sobre tu proyecto, como detalles de funcionalidades, capturas de pantalla y cualquier otro aspecto relevante.
