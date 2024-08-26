@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="container__search">
+        <mat-form-field appearance="outline" >
+            <mat-label>Buscar</mat-label>
+            <input matInput [formControl]="searchControl" placeholder="Escribe para buscar" />
+        </mat-form-field>
+  
+    </div>
+    <div class="container__card">
+        <div *ngFor="let cardImage of filteredCardsImages; trackBy: trackByFn">
+            <div (click)="openModal(cardImage)">
+                <app-card [title]="cardImage.title" [imageUrl]="cardImage.thumbnailUrl" [id]="cardImage.id"></app-card>
+            </div>
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,12 @@
+<mat-card>
+    <div class="card__header">
+    <mat-card-header>
+        <mat-card-title>{{title}}</mat-card-title>
+    </mat-card-header>
+    </div>
+    <div class="card__image">
+     <img mat-card-image [src]="imageUrl"  (load)="onImageLoad()"  alt="imagen de prueba">
+    </div>
+  
+</mat-card>
+

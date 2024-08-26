@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-header>
+        <div class="wrap">
+            <mat-card-title>{{data.title}}</mat-card-title>
+            <button  mat-icon-button (click)="close()">
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>  
+    </mat-card-header>
+
+    <img  [src]="data.url"  alt="imagen de prueba"  (load)="onImageLoad()"  > 
+
+</mat-card>
