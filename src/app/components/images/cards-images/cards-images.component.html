@@ -6,13 +6,36 @@
         </mat-form-field>
   
     </div>
-    <div class="container__card">
-        <div *ngFor="let cardImage of filteredCardsImages; trackBy: trackByFn">
-            <div (click)="openModal(cardImage)">
+    <div>
+        <h1>Mis favoritos</h1>
+        <div *ngFor="let cardImage of imageFavorite">
+            <div>
                 <app-card [title]="cardImage.title" [imageUrl]="cardImage.thumbnailUrl" [id]="cardImage.id"></app-card>
             </div>
         </div>
     </div>
+
+    
+
+
+
+    <div class="container__card">
+        <h1>LISTADO DE IMAGENES</h1>
+        <div *ngFor="let cardImage of filteredCardsImages">
+            <div (click)="openModal(cardImage)">
+                <app-card [title]="cardImage.title" [imageUrl]="cardImage.thumbnailUrl" [id]="cardImage.id"  (addFavoriteItem)="itemFavorite($event)"  ></app-card>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
 
 </div>
 

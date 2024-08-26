@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
@@ -20,8 +20,8 @@ export class CardComponent implements OnInit {
 
 @Input() title!: string;
 @Input() imageUrl!: string;
-@Input() id!:number
-
+@Input() id!:number;
+@Output() addFavoriteItem: EventEmitter<any> = new EventEmitter();
 
 constructor(
   private spinner: NgxSpinnerService
@@ -37,5 +37,11 @@ ngOnInit (){
 onImageLoad(){
   this.spinner.hide();
 }
+
+
+addFavorite(){
+  this.addFavoriteItem.emit(this.id)
+}
+
 
 }

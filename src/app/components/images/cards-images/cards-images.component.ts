@@ -13,13 +13,14 @@ import { MatDialog } from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ModalViewImageComponent } from './components/modal-view-image/modal-view-image.component';
 import {FormsModule} from '@angular/forms';
+
 const MATERIAL_MODULES =[MatCardModule, MatButtonModule, MatInputModule, MatIconModule, MatFormFieldModule ]
 
 
 @Component({
   selector: 'app-cards-images',
   standalone: true,
-  imports: [ReactiveFormsModule, MATERIAL_MODULES, CardComponent, HttpClientModule, CommonModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule, MATERIAL_MODULES, CardComponent, HttpClientModule, FormsModule],
   providers: [CardsImagesService],
   templateUrl: './cards-images.component.html',
   styleUrl: './cards-images.component.scss'
@@ -29,7 +30,8 @@ export class CardsImagesComponent implements OnInit  {
   cardsImages:Array<CardsImagesResponse>=[]
   filteredCardsImages: Array<CardsImagesResponse> = [];
   searchControl = new FormControl('');
-  value = 'Clear me';
+  imageFavorite:  Array<any> = [];
+  selectImage:any 
  constructor(
   private cardsImagesService:CardsImagesService,
   private dialog: MatDialog,
@@ -42,20 +44,15 @@ export class CardsImagesComponent implements OnInit  {
 ngOnInit(){
   this.uploadImages() 
 
-  this.searchControl.valueChanges.subscribe((searchText: any) => {
+  this.searchControl.valueChanges.subscribe((searchText: string | null) => {
+    const filterText = searchText?.toLowerCase() ?? '';  
     this.filteredCardsImages = this.cardsImages.filter(card =>
-      card.title.toLowerCase().includes(searchText.toLowerCase())
+      card.title.toLowerCase().includes(filterText)
     );
   });
 
-
-
-
 }
 
-trackByFn(index: number, item: any) {
-  return item.id; 
-}
 
 uploadImages(){
   this.cardsImagesService.getImages().subscribe(res =>{
@@ -74,6 +71,15 @@ openModal(element:CardsImagesResponse){
   })
 }
 
+
+itemFavorite(id:number){
+  
+  this.selectImage = this.cardsImages.find(item => item.id == id )
+  console.log("seleccion",this.selectImage)
+  this.imageFavorite.push(this.selectImage)
+  console.log("agregar",event)
+  console.log("array de data",this.imageFavorite)
+} 
 
 
 }
